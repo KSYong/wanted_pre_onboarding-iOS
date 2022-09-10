@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" id="ZCk-8h-Ibt"/>
                     <connections>
                         <outlet property="weatherTableView" destination="6gr-Co-2iw" id="05p-fK-I3d"/>
-                        <segue destination="sH6-XM-f1T" kind="show" id="lNl-yl-04Y"/>
+                        <segue destination="sH6-XM-f1T" kind="show" identifier="toDetailVC" id="lNl-yl-04Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
