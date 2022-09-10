@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60752DB128CC786B006CEF17 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60752DB028CC786B006CEF17 /* WeatherCell.swift */; };
 		60C0A54D28CBAC2F0078B0A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C0A54C28CBAC2F0078B0A6 /* AppDelegate.swift */; };
 		60C0A54F28CBAC2F0078B0A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C0A54E28CBAC2F0078B0A6 /* SceneDelegate.swift */; };
 		60C0A55128CBAC2F0078B0A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C0A55028CBAC2F0078B0A6 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60752DB028CC786B006CEF17 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		60C0A54928CBAC2F0078B0A6 /* wanted_pre_onboarding-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wanted_pre_onboarding-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C0A54C28CBAC2F0078B0A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60C0A54E28CBAC2F0078B0A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		60C0A58028CBAC850078B0A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				60752DB028CC786B006CEF17 /* WeatherCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				60C0A55128CBAC2F0078B0A6 /* ViewController.swift in Sources */,
 				60C0A54D28CBAC2F0078B0A6 /* AppDelegate.swift in Sources */,
 				60C0A58428CBAD690078B0A6 /* DetailViewController.swift in Sources */,
+				60752DB128CC786B006CEF17 /* WeatherCell.swift in Sources */,
 				60C0A54F28CBAC2F0078B0A6 /* SceneDelegate.swift in Sources */,
 				60C0A55728CBAC2F0078B0A6 /* wanted_pre_onboarding_iOS.xcdatamodeld in Sources */,
 			);

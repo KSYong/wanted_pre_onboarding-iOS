@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="113" id="cdj-YZ-vFf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherCell" rowHeight="113" id="cdj-YZ-vFf" customClass="WeatherCell" customModule="wanted_pre_onboarding_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdj-YZ-vFf" id="1fh-Dg-jun">
@@ -70,6 +70,12 @@
                                                 <constraint firstItem="CL8-nY-lW8" firstAttribute="centerY" secondItem="1fh-Dg-jun" secondAttribute="centerY" id="uLX-E2-w8R"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityNameLabel" destination="xVU-qe-Uxe" id="kCg-mi-bfI"/>
+                                            <outlet property="currentHumidityLabel" destination="UqE-Xk-PYT" id="Xvu-nN-je0"/>
+                                            <outlet property="currentTemperatureLabel" destination="ch2-ia-8u2" id="oCx-xo-leG"/>
+                                            <outlet property="weatherIcon" destination="CL8-nY-lW8" id="R6O-l5-Dhd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -85,6 +91,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZCk-8h-Ibt"/>
                     <connections>
+                        <outlet property="weatherTableView" destination="6gr-Co-2iw" id="05p-fK-I3d"/>
                         <segue destination="sH6-XM-f1T" kind="show" id="lNl-yl-04Y"/>
                     </connections>
                 </viewController>
