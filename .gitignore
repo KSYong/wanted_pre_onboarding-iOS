@@ -10,8 +10,8 @@
 Helpers/Storage.swift
 
 # Tests
-wanted_pre_onboarding-iOSTests
-wanted_pre_onboarding-iOSUITests
+wanted_pre_onboarding-iOSTests/
+wanted_pre_onboarding-iOSUITests/
 
 ## User settings
 xcuserdata/
