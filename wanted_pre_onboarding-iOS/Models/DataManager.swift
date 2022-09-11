@@ -9,6 +9,10 @@ import UIKit
 
 class DataManager {
     
+    static let shared = DataManager()
+    
+    private init() {}
+    
     private var weatherDataArray: [WeatherData] = []
     
     func makeWeatherData() {
