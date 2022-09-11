@@ -11,9 +11,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var weatherTableView: UITableView!
     
+    var networkManager = NetworkManager.shared
+    var dataManager = DataManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
 
