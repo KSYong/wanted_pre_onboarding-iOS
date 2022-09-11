@@ -6,7 +6,12 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+# API 키가 담겨있는 파일
 Helpers/Storage.swift
+
+# Tests
+wanted_pre_onboarding-iOSTests
+wanted_pre_onboarding-iOSUITests
 
 ## User settings
 xcuserdata/
