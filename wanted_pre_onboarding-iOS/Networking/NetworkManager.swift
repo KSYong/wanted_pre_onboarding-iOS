@@ -19,8 +19,7 @@ class NetworkManager {
     
     private init() {}
     
-    func getWeatherJson(latitude lat: Double, longitude lon: Double) {
-        
+    func getWeatherJsonData(latitude lat: Double, longitude lon: Double, completionHandler: @escaping (DetailData?, Error?) -> Void) {
         guard let url = URL(string: "\(WeatherApi.requestURL)&lat=\(lat)&lon=\(lon)&appid=\(Storage.ApiKey)") else {
             print("Error: url 생성 실패")
             return
@@ -47,8 +46,19 @@ class NetworkManager {
                 return
             }
             
-            print(String(decoding: safeData, as: UTF8.self))
+            completionHandler(self.parseJSON(safeData), error)
         }.resume()
-   
+    }
+    
+    func parseJSON(_ detailData: Data) -> DetailData? {
+        do {
+            let decoder = JSONDecoder()
+            let decodedData = try decoder.decode(DetailData.self, from: detailData)
+            return decodedData
+            
+        } catch {
+            print("Error: JSON 파일 파싱 실패")
+            return nil
+        }
     }
 }
