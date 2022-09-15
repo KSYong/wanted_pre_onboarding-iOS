@@ -21,37 +21,37 @@ struct WeatherData {
     var currentHumidity: String?
 }
 
-
 // MARK: - requestURL 후 반환받은 JSON 정보를 파싱한 결과물이 저장되는 구조체
 struct DetailData: Codable {
-    let coord: Coord
-    let weather: Weather
-    let base: String
-    let main: Main
-    let visibility: Int
-    let wind: Wind
-    let clouds: Clouds
-    let dt: Int
-    let sys: Sys
-    let timezone, id: Int
-    let name: String
-    let cod: Int
+    let coord: Coord?
+    let weather: [Weather]?
+    let base: String?
+    let main: Main?
+    let visibility: Int?
+    let wind: Wind?
+    let rain: Rain?
+    let clouds: Clouds?
+    let dt: Int?
+    let sys: Sys?
+    let timezone, id: Int?
+    let name: String?
+    let cod: Int?
 }
 
-// Clouds
+// MARK: - Clouds
 struct Clouds: Codable {
-    let all: Int
+    let all: Int?
 }
 
-// Coord
+// MARK: - Coord
 struct Coord: Codable {
-    let lon, lat: Double
+    let lon, lat: Double?
 }
 
-// Main
+// MARK: - Main
 struct Main: Codable {
-    let temp, feelsLike, tempMin, tempMax: Double
-    let pressure, humidity, seaLevel, grndLevel: Int
+    let temp, feelsLike, tempMin, tempMax: Double?
+    let pressure, humidity, seaLevel, grndLevel: Int?
 
     enum CodingKeys: String, CodingKey {
         case temp
@@ -64,17 +64,26 @@ struct Main: Codable {
     }
 }
 
-// Sys
-struct Sys: Codable {
-    let type, id: Int
-    let country: String
-    let sunrise, sunset: Int
+// MARK: - Rain
+struct Rain: Codable {
+    let the1H: Double?
+
+    enum CodingKeys: String, CodingKey {
+        case the1H = "1h"
+    }
 }
 
-// Weather
+// MARK: - Sys
+struct Sys: Codable {
+    let type, id: Int?
+    let country: String?
+    let sunrise, sunset: Int?
+}
+
+// MARK: - Weather
 struct Weather: Codable {
-    let id: Int
-    let main, weatherDescription, icon: String
+    let id: Int?
+    let main, weatherDescription, icon: String?
 
     enum CodingKeys: String, CodingKey {
         case id, main
@@ -83,9 +92,9 @@ struct Weather: Codable {
     }
 }
 
-// Wind
+// MARK: - Wind
 struct Wind: Codable {
-    let speed: Double
-    let deg: Int
-    let gust: Double
+    let speed: Double?
+    let deg: Int?
+    let gust: Double?
 }
